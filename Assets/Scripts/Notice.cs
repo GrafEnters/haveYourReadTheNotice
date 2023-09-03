@@ -1,30 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Notice : MonoBehaviour
-{
+public class Notice : MonoBehaviour{
     [SerializeField] private string _sceneNameOnAgree;
 
-    private bool IsConditionsMet()
-    {
+    private bool IsConditionsMet(){
         return true;
     }
 
-    public void Agree()
-    {
-        if (IsConditionsMet())
-        {
+    public void Agree(){
+        if (IsConditionsMet()){
             SceneManager.LoadScene(_sceneNameOnAgree);
         }
-        else
-        {
+        else{
             ShowErrorHint();
         }
     }
 
-    private void ShowErrorHint()
-    {
-    }
+    private void ShowErrorHint(){ }
 }
