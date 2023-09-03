@@ -1,4 +1,5 @@
 using System;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,10 +10,8 @@ public class Cat : MonoBehaviour{
     int groundLayer;
     Transform playerGroundLocation;
 
-    public float playerSpeed = 5;
-    public float jumpForce = 1;
-
     private Action _onFinishedTouched;
+    [SerializeField] private MovementConfig _movementConfig;
 
     public void Init(Action onFinishTouched){
         _onFinishedTouched = onFinishTouched;
@@ -58,7 +57,7 @@ public class Cat : MonoBehaviour{
         // Check if isGrounded
         GroundCheck();
 
-        rb.velocity = rb.velocity + (new Vector2(movement.x, 0.0f) * playerSpeed * Time.deltaTime);
+        rb.velocity = rb.velocity + (new Vector2(movement.x, 0.0f) * _movementConfig.HorAcceleration * Time.deltaTime);
 
         // No horizontal movement, stop velocity if on the ground.
         if (movement.x == 0 && isGrounded == true){
@@ -69,10 +68,19 @@ public class Cat : MonoBehaviour{
         if (isGrounded && movement.y > 0){
             //rb.velocity = rb.velocity + (new Vector2(0.0f, (movement.y * jumpForce)) * Time.deltaTime);
             //rb.AddForce(Vector2.up * jumpForce);
-            rb.velocity = rb.velocity + Vector2.up * jumpForce;
+            rb.velocity = rb.velocity + Vector2.up * _movementConfig.JumpForce;
+            
             Debug.Log("IsGrounded - Jump: " + movement.y);
             isGrounded = false;
         }
+        ClampSpeed();
+    }
+
+    private void ClampSpeed(){
+        Vector2 tmp = rb.velocity;
+        tmp.x = Mathf.Clamp(tmp.x, -_movementConfig.MaxHorSpeed, _movementConfig.MaxHorSpeed);
+        tmp.y = Mathf.Clamp(tmp.y, -_movementConfig.MaxVertSpeed, _movementConfig.MaxVertSpeed);
+        rb.velocity = tmp;
     }
 
     void OnTriggerEnter2D(Collider2D col){
