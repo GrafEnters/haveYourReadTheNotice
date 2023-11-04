@@ -7015,6 +7015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneNameOnAgree: Notice
+  _antivirusModulePrefab: {fileID: 2659707785749192711, guid: f223c33f460db0548b2b06f17cd191c4, type: 3}
 --- !u!1 &6611945190877600018
 GameObject:
   m_ObjectHideFlags: 0
