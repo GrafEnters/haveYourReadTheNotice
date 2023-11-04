@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,15 +7,18 @@ using UnityEngine.SceneManagement;
 public class Cat : MonoBehaviour{
     Rigidbody2D rb;
     bool isGrounded = false;
+    private bool isJumping = false;
     Vector2 movement;
     int groundLayer;
     Transform playerGroundLocation;
 
     private Action _onFinishedTouched;
+    private Action _onJump;
     [SerializeField] private MovementConfig _movementConfig;
 
-    public void Init(Action onFinishTouched){
+    public void Init(Action onFinishTouched, Action onJump){
         _onFinishedTouched = onFinishTouched;
+        _onJump = onJump;
     }
 
     void Start(){
@@ -65,15 +69,26 @@ public class Cat : MonoBehaviour{
         }
 
         // Can jump
-        if (isGrounded && movement.y > 0){
-            //rb.velocity = rb.velocity + (new Vector2(0.0f, (movement.y * jumpForce)) * Time.deltaTime);
-            //rb.AddForce(Vector2.up * jumpForce);
-            rb.velocity = rb.velocity + Vector2.up * _movementConfig.JumpForce;
-            
-            Debug.Log("IsGrounded - Jump: " + movement.y);
-            isGrounded = false;
+        if (isGrounded && movement.y > 0 && !isJumping) {
+            Jump();
         }
         ClampSpeed();
+    }
+
+    private void Jump() {
+        //rb.velocity = rb.velocity + (new Vector2(0.0f, (movement.y * jumpForce)) * Time.deltaTime);
+        //rb.AddForce(Vector2.up * jumpForce);
+        rb.velocity = rb.velocity + Vector2.up * _movementConfig.JumpForce;
+        StartCoroutine(JumpCoroutine());
+        Debug.Log("IsGrounded - Jump: " + movement.y);
+        isGrounded = false;
+        _onJump?.Invoke();
+    }
+
+    private IEnumerator JumpCoroutine() {
+        isJumping = true;
+        yield return new WaitForSeconds(0.1f);
+        isJumping = false;
     }
 
     private void ClampSpeed(){

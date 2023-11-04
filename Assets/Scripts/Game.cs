@@ -1,17 +1,36 @@
+using System;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Game : MonoBehaviour{
-    [SerializeField] private string _sceneNameOnAgree;
+public class Game : MonoBehaviour {
+    [SerializeField]
+    private string _sceneNameOnAgree;
 
-    private void Awake(){
+    [SerializeField]
+    private AntivirusModule _antivirusModulePrefab;
+
+    public Action OnJump;
+
+    private void Awake() {
         Cat cat = FindObjectOfType<Cat>();
-        if (cat != null){
-            cat.Init(Win);
+        if (cat != null) {
+            cat.Init(Win, delegate { OnJump?.Invoke(); });
         }
     }
 
-    public void Win(){
+    private void Start() {
+        InitParameters(GameParametersManager.Instance.GameParameters);
+    }
+
+    private void InitParameters(GameParameters parameters) {
+        if (parameters.IsAntivirusActive) {
+            AntivirusModule antivirusModule = Instantiate(_antivirusModulePrefab);
+            antivirusModule.Init(this);
+        }
+    }
+
+    public void Win() {
         SceneManager.LoadScene(_sceneNameOnAgree);
     }
 }
