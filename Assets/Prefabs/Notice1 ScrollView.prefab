@@ -367,8 +367,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000036239624}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000061035, y: 0.000030517578}
+  m_SizeDelta: {x: -64.647, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &5530861564983111257
 MonoBehaviour:
@@ -405,15 +405,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: -242694325, guid: 366bea6ba9af84a3e8e3ae837cceba0b, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -514,27 +514,145 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew
-    TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew
-    TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew
-    TextNew TextNew TextNew TextNew TextNew TextNew Text
+  m_text: 'End User License Agreement (EULA)
+
+
+    This End User License Agreement
+    ("Agreement") is a legal document between you and [Your Company Name], a [Your
+    Company''s Legal Structure] ("Company"), governing your use of our software,
+    including any associated media, printed materials, and online or electronic documentation
+    (collectively, the "Software").
+
+
+    By installing, copying, or using the Software,
+    you agree to be bound by the terms and conditions of this Agreement. If you do
+    not agree with the terms of this Agreement, you must not use the Software.
+
+
+    1.
+    License Grant
+
+
+    Subject to your compliance with the terms and conditions
+    of this Agreement, Company grants you a non-exclusive, non-transferable, revocable
+    license to use the Software solely for your personal, non-commercial use.
+
+
+    2.
+    Restrictions
+
+
+    You may not:
+
+
+    2.1. Modify, adapt, translate, reverse
+    engineer, decompile, disassemble, or create derivative works based on the Software.
+
+    2.2.
+    Use the Software for any purpose other than its intended use.
+
+    2.3. Rent,
+    lease, lend, or sublicense the Software.
+
+    2.4. Remove, alter, or obscure
+    any proprietary notices or labels on the Software.
+
+    2.5. Use the Software
+    to engage in any illegal activities.
+
+
+    3. Ownership
+
+
+    The Software and
+    all intellectual property rights therein are owned by Company and its licensors.
+    This Agreement does not convey to you any rights of ownership in the Software.
+
+
+    4.
+    Support and Updates
+
+
+    Company may provide support and updates for the Software
+    at its discretion. Your use of any such support and updates is subject to this
+    Agreement.
+
+
+    5. Termination
+
+
+    This Agreement is effective until terminated.
+    Your rights under this Agreement will terminate automatically without notice
+    from Company if you fail to comply with any term(s) of this Agreement. Upon termination,
+    you must cease all use of the Software and destroy all copies of the Software
+    in your possession.
+
+
+    6. Warranty Disclaimer
+
+
+    The Software is provided
+    "as is" without any warranty of any kind, either expressed or implied, including,
+    but not limited to, the implied warranties of merchantability and fitness for
+    a particular purpose.
+
+
+    7. Limitation of Liability
+
+
+    To the maximum extent
+    permitted by applicable law, in no event shall Company or its affiliates be liable
+    for any indirect, incidental, special, consequential, or punitive damages, or
+    any loss of profits or revenues, whether incurred directly or indirectly, or
+    any loss of data, use, goodwill, or other intangible losses, resulting from (i)
+    your use or inability to use the Software, (ii) any unauthorized access to or
+    use of our servers and/or any personal information stored therein, (iii) any
+    interruption or cessation of transmission to or from the Software, (iv) any bugs,
+    viruses, trojan horses, or the like that may be transmitted to or through the
+    Software by any third party, (v) any errors or omissions in any content or for
+    any loss or damage incurred as a result of the use of any content posted, emailed,
+    transmitted, or otherwise made available through the Software.
+
+
+    8. Governing
+    Law
+
+
+    This Agreement shall be governed by and construed in accordance with
+    the laws of the [Your Jurisdiction]. Any legal action or proceeding arising under
+    this Agreement shall be brought exclusively in the federal or state courts located
+    in [Your Jurisdiction], and the parties hereby consent to personal jurisdiction
+    and venue therein.
+
+
+    9. Contact Information
+
+
+    If you have any questions
+    or concerns regarding this Agreement, please contact us at [Your Contact Information].
+
+
+    By
+    installing and using the Software, you acknowledge that you have read, understood,
+    and agree to be bound by this Agreement. If you do not agree to the terms and
+    conditions of this Agreement, do not install or use the Software.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 06549e086bee949449b7fda987ac57ed, type: 2}
-  m_sharedMaterial: {fileID: 7141169107238764105, guid: 06549e086bee949449b7fda987ac57ed, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c6f33fdc9b794ea1aa858a1b63e02c4, type: 2}
+  m_sharedMaterial: {fileID: 7911620286702763265, guid: 8c6f33fdc9b794ea1aa858a1b63e02c4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278716659
+  m_fontColor: {r: 0.9528302, g: 0.03146139, b: 0.03146139, a: 1}
   m_enableVertexGradient: 0
-  m_colorMode: 3
+  m_colorMode: 0
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0, g: 0, b: 0, a: 1}
+    topRight: {r: 0, g: 0, b: 0, a: 1}
+    bottomLeft: {r: 0, g: 0, b: 0, a: 1}
+    bottomRight: {r: 0, g: 0, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -550,8 +668,8 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 8
+  m_fontStyle: 77
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -561,8 +679,8 @@ MonoBehaviour:
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_wordWrappingRatios: 0.043
+  m_overflowMode: 5
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
@@ -623,10 +741,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 375, y: 375}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 18.6651, y: 0}
+  m_SizeDelta: {x: 1287.3301, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4767459016104870016
 CanvasRenderer:
@@ -643,14 +761,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4301953014568680193}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -708,9 +826,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29751e41737e4a4ba0dbfebcf84a10a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneNameOnAgree: 
-  _noticeConfig: {fileID: 0}
-  _texts: []
+  _sceneNameOnAgree: Game1
+  _noticeConfig: {fileID: 11400000, guid: ebffd3e005b49cb459d22a915320df9a, type: 2}
+  _texts:
+  - {fileID: 2887253007970437634}
+  - {fileID: 6469740332780270852}
 --- !u!1 &7908288800531690161
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -242694325, guid: 366bea6ba9af84a3e8e3ae837cceba0b, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -801,7 +921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 0
+  m_ShowMaskGraphic: 1
 --- !u!1 &8286832275023701441
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,8 +959,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: -17}
+  m_AnchoredPosition: {x: -56, y: -58.83844}
+  m_SizeDelta: {x: 54.07, y: -58.838}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &7905320630270283488
 CanvasRenderer:
@@ -924,7 +1044,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 4699171993249136153}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.7725746
+  m_Size: 0.3922463
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
